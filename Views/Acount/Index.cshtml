@@ -1,0 +1,154 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+      <div class="container" style="font-family:'Footlight MT'">
+          <div class=" row row-offcanvas row-offcanvas-right">
+          <div class="col-xs-12 col-sm-9">
+              <h1>Free Classified Ads For Buying And Selling</h1>
+          </div>
+
+          @*<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sideb">
+              <div>
+                 <select class="form-control" id="location" name="location">
+                      <option>Lahore</option>
+                      <option>Karachi</option>
+                      <option>Islamabad</option>
+                      <option>Multan</option>
+                      <option>Faisalabad</option>
+                      <option>Rawal Pindi</option>
+                      <option>Murree</option>
+                      <option>Quetta</option>
+                  </select>
+              </div>
+          </div>*@
+      </div>
+      </div> 
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+          
+          <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div id="uper">
+          <div class="jumbotron" style="background-color:lightblue">
+
+            <!--======== Full Page Image Background Carousel Header ===========-->
+    
+            <header id="myCarousel" class="carousel slide">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for Slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <!-- Set the first background image using inline CSS below. -->
+                        <div class="fill">
+                            <img src="~/Images/buy.jpg" style="height:330px; width:750px"/>
+                        </div>
+                        <div class="carousel-caption">
+                            <h2>Best online plateform for buying and selling products</h2>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <!-- Set the second background image using inline CSS below. -->
+                        <div class="fill" >
+                            <img src="~/Images/meet.jpg" style="height:330px; width:750px" />
+                        </div>
+                        <div class="carousel-caption">
+                            <h2>Meetings with people arround you</h2>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <!-- Set the third background image using inline CSS below. -->
+                        <div class="fill" >
+                            <img src="~/Images/technology.jpg" style="height:330px; width:750px" />
+                        </div>
+                        <div class="carousel-caption">
+                            <h2>Get Facilitates through modern technologies</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+
+            </header>
+  
+          </div>
+              </div>
+       </div>
+        
+          
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+            <div>
+                <form method="post" action="/Home/AdPost">
+                    <button class="btn btn-danger" type="submit" style="width:250px">+ Post Ads Here </button>
+                </form>
+            </div><br />
+          <div class="list-group">
+            <a class="list-group-item active" ><b>Catagories</b></a>
+                <a id="post1" href="/Items/LoadItems2?category=Cell Phone" class="list-group-item">Cell Phone</a>
+                <a id="post2" href="/Items/LoadItems2?category=Vehicles" class="list-group-item">Vehicles</a>
+                <a id="post3" href="/Items/LoadItems2?category=Laptops and Computers" class="list-group-item">Laptops and Computers</a>
+                <a id="post4" href="/Items/LoadItems2?category=Books" class="list-group-item">Books</a>
+                <a id="post5" href="/Items/LoadItems2?category=Animals" class="list-group-item">Animals</a>
+                <a id="post6" href="/Items/LoadItems2?category=Bikes" class="list-group-item">Bike</a>
+                <a id="post7" href="/Items/LoadItems2?category=Real Estate" class="list-group-item">Real Estate</a>
+                <a id="post8" href="/Items/LoadItems2?category=Accessories" class="list-group-item">Accessories</a>
+                <a id="post9" href="/Items/LoadItems2?category=Other" class="list-group-item">Other</a>
+          </div>
+        </div>
+      </div>
+      </div> 
+      <br/><br/>
+      <div id="lower">
+          <div class="container">
+              <p class="breadcrumb" style="font-size:20px; font-family:'Footlight MT'"">This website has been launched because we saw the need for a place where the local community within a city could come together, meet, trade and help each other in many ways. This website is the next generation of free online classifieds. It provides a simple solution to the complications involved in selling, buying, trading, discussing, organizing, and meeting people near you, wherever you may reside. On this website you can: Easily design rich ads with pictures. Control your selling, buying, and community activity in My OLX Display your ads on your social networking profile. Access the site from your mobile phone as per your need. View it in your local language</p>
+          </div>
+          <br/>
+
+          <!-- After Description -->
+          <div class="container">
+              <div class="container marketing">
+
+              <!--================= Three columns ========================== -->
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <img class="img-circle" src="~/Images/b.png" width="140" height="140">
+                      <h2>Buying</h2>
+                      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                      <img class="img-circle" src="~/Images/s.png" alt="Selling" width="140" height="140">
+                      <h2>Selling</h2>
+                      <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                      <img class="img-circle" src="~/Images/logo.jpg" alt="Classifieds" width="140" height="140">
+                      <h2>Classifieds</h2>
+                      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                    </div><!-- /.col-lg-4 -->
+                  </div><!-- /.row -->
+              </div>
+          </div>
+        </div>
+          <!-- ======================= End Portion ====================== -->
+    
+
+   

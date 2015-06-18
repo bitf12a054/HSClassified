@@ -1,0 +1,73 @@
+﻿@model Project.Models.UserMessage
+
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml"; 
+}
+
+
+    <h1 style="text-align: center; font-family:'Arabic Typesetting'; font-size:60px">Free Online Classified Ads</h1>
+
+    <div class="row content">
+            <div class="col-md-9">
+                <div class="col-md-offset-4">
+                    <hr>
+                    <h2 class="intro-text text-centre" style="text-align: center; font-family:Castellar">
+                        Contact Form
+                        <strong></strong>
+                    </h2>
+                    <hr>
+                    <h3 style="font-family:'Meiryo UI'">For Any Queries, Contact Us:</h3>
+
+                   @using(@Html.BeginForm("SaveQuery", "Home", FormMethod.Post)){
+                    
+                        @*<div class="row">*@
+                            <div class="form-group col-lg-4">
+
+                                <label>User Name</label>
+                                @Html.TextBoxFor(model => model.UserName, new { @class="form-control"})
+                                @*<input type="text" class="form-control" name="id">*@
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="form-group col-lg-12">
+                                <label>Message</label>
+                                @Html.TextAreaFor(model => model.Message, new { @class="form-control" , @row="4"})
+                                @*<textarea class="form-control" rows="6" name="msg"></textarea>*@
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <input type="hidden" name="save" value="contact">
+                                <button type="submit" class="btn btn-success">Send</button>
+                            </div>
+                        @*</div>*@
+                    }
+                    @{Html.EndForm();}
+
+                    @*<form role="form" method="post" action="/Items/SaveQuery">   
+                    </form>*@
+                </div>
+            </div>
+        </div>
+        <!-- 2nd div -->
+    <div class="row content">
+        <div>
+            <div class="col-md-9">
+                <div class="col-md-offset-4" style="font-size:30px">
+                    <hr><h2 class="intro-text text-centre" style="text-align: center; font-family:Castellar">Contact Us At</h2><hr>
+                    <h3>
+                        Developer : Hamza Shafique<br><br>
+                        Phone:
+                        123.456.7890
+                    </h3>
+                    <h3>
+                        Email:
+                        <strong><a href="www.gmail.com">hamxxa07@gmail.com</a></strong>
+                    </h3>
+                    <h3>
+                        Address:
+                        <br>3481 PUCIT
+                        <br>LAHORE, PK 90210
+                    </h3>
+                </div><br /><br />
+             </div>
+        </div>
+        
+        </div>

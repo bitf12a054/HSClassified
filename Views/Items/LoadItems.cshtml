@@ -1,0 +1,86 @@
+﻿@model Project.Models.Ad
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";  
+}
+
+<div class="container" style="font-family:'Footlight MT'">
+          <div class=" row row-offcanvas row-offcanvas-right">
+          <div class="col-xs-12 col-sm-9">
+              <h1>Free Classified Ads For Buying And Selling</h1>
+          </div>
+
+          @*<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sideb">
+              <div>
+                 <select class="form-control" id="location" name="location">
+                      <option>Lahore</option>
+                      <option>Karachi</option>
+                      <option>Islamabad</option>
+                      <option>Multan</option>
+                      <option>Faisalabad</option>
+                      <option>Rawal Pindi</option>
+                      <option>Murree</option>
+                      <option>Quetta</option>
+                  </select>
+              </div>
+          </div>*@
+      </div>
+      </div> 
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+          
+          <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div id="uper">
+
+            <!--======== Full Page Image Background Carousel Header ===========-->
+    
+            <div style="margin-left:50px;margin-top:100px" class="row">
+        @foreach (var l in ViewBag.Data) {
+            <div class="row content">
+                <div class="col-md-5">
+                    <div class="col-md-offset-6">
+                        <img class="img-thumbnail" src="/Acount/RetrieveImage/@l.Id" alt="Image" width="400" height="400">
+                
+                        <p>@l.Description</p>
+                        <section>
+                            <p><br>Status: @l.Status<br />Email: @l.SellerAddress<br />Phone No: @l.SellerPhone<br />Price: @l.Price</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            
+        }
+
+    </div>
+  
+          </div>
+       </div>
+        
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+            @*<div>
+                <form method="post" action="/Acount/AdPost">
+                    <button class="btn btn-danger" type="submit" style="width:250px">+ Post Ads Here </button>
+                </form>
+            </div>*@
+            <br />
+          <div class="list-group">
+            <a class="list-group-item active" ><b>Catagories</b></a>
+                <a id="post1" href="/Items/LoadItems?category=Cell Phone" class="list-group-item">Cell Phone</a>
+                <a id="post2" href="/Items/LoadItems?category=Vehicles" class="list-group-item">Vehicles</a>
+                <a id="post3" href="/Items/LoadItems?category=Computer" class="list-group-item">Computer</a>
+                <a id="post4" href="/Items/LoadItems?category=Books" class="list-group-item">Books</a>
+                <a id="post5" href="/Items/LoadItems?category=Animals" class="list-group-item">Animals</a>
+                <a id="post6" href="/Items/LoadItems?category=Bike" class="list-group-item">Bike</a>
+                <a id="post7" href="/Items/LoadItems?category=Real Estate" class="list-group-item">Real Estate</a>
+                <a id="post8" href="/Items/LoadItems?category=Accessories" class="list-group-item">Accessories</a>
+                <a id="post9" href="/Items/LoadItems?category=Other" class="list-group-item">Other</a>
+          </div>
+        </div>
+      </div>
+      </div> 
+   
+
+  

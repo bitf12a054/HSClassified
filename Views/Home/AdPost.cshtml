@@ -1,0 +1,128 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml"; 
+}
+<form enctype="multipart/form-data"  method="post" action="/Home/posted">
+    <br/><hr />
+    <h1 style="text-align: center; font-family:'Arabic Typesetting'; font-size:60px">Free Online Classified Ads</h1>
+    <div class="row content">
+            <div class="col-md-8">
+                <div class="col-md-offset-6">
+                    
+                    <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Classified details</h3>
+                    </div>
+                    <div class="panel-body">
+                        
+                        <div class="form-group">
+                            <label for="heading">Title</label>
+                            <input class="form-control" data-val="true" data-val-length="Title must be between 3 and 30 characters!" data-val-length-max="50" data-val-length-min="3" data-val-required="Title is required" id="title" name="title" placeholder="eg. Hp Laptop i5" type="text" value=""/>
+                            <span class="field-validation-valid" data-valmsg-for="title" data-valmsg-replace="true"></span>
+                        </div>
+                        <div>
+                            <label for="heading">Catagory</label>
+                            <select class="form-control" id="cat" name="catagory">
+                                <option>Real Estate</option>
+                                <option>Vehicle</option>
+                                <option>Computer</option>
+                                <option>Cell Phone</option>
+                                <option>Books</option>
+                                <option>Accessories</option>
+                                <option>Animals</option>
+                                <option>Bike</option>
+                                <option>Other</option>
+                            </select>
+                            <br />
+                            <span class="field-validation-valid" data-valmsg-for="cat" data-valmsg-replace="true"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="heading">Brand</label>
+                            <input class="form-control" data-val="true" data-val-length="Brand Name must be between 3 and 50 characters!" data-val-length-max="50" data-val-length-min="3" data-val-required="Brand is required" id="brand" name="brand" placeholder="Apple, Nokia, LG" type="text" value="" />
+                            
+                            <span class="field-validation-valid" data-valmsg-for="brand" data-valmsg-replace="true"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status">Status</label>
+
+
+                            <select class="form-control" id="status" name="status"><option selected="selected">New</option>
+                            <option>Used</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="text">Description</label>
+                            <textarea class="form-control" cols="20" data-val="true" data-val-length="First Name must be between 10 and 500 characters!" data-val-length-max="500" data-val-length-min="10" data-val-required="Description is required" id="description" name="description" rows="6">
+                            </textarea>
+                            
+                            <span class="field-validation-valid" data-valmsg-for="description" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Price</label>
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <div class="input-group" style="width: 150px;">
+                                        <input class="form-control" data-val="true" data-val-length="Price must be between 100 and 10 Million !" data-val-length-max="8" data-val-length-min="3" data-val-required="Price is required" id="price" name="price" type="number" value="" />
+                                         <span class="input-group-addon">PKR</span>
+                                    </div>
+                                    <span class="field-validation-valid" data-valmsg-for="price" data-valmsg-replace="true"></span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Classified images</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label>Select image</label>
+                            <input class="form-control" type="file" name="ImageData" id="ImageData">
+
+                        </div>
+                    </div>
+                    </div>
+                        <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Client Info</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                            <label for="heading">Name </label>
+                            <input class="form-control" data-val="true" data-val-length="Title must be between 3 and 30 characters!" data-val-length-max="50" data-val-length-min="3" data-val-required="Title is required" id="cname" name="cname" type="text" value=""/>
+                            <span class="field-validation-valid" data-valmsg-for="title" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="heading">Email</label>
+                            <input class="form-control" data-val="true" data-val-length="Title must be between 3 and 30 characters!" data-val-length-max="50" data-val-length-min="3" data-val-required="Title is required" id="cemail" name="cemail" type="text" value=""/>
+                            <span class="field-validation-valid" data-valmsg-for="title" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="heading">Phone</label>
+                            <input class="form-control" data-val="true" data-val-length="Title must be between 3 and 30 characters!" data-val-length-max="50" data-val-length-min="3" data-val-required="Title is required" id="cphone" name="cphone" type="text" value=""/>
+                            <span class="field-validation-valid" data-valmsg-for="title" data-valmsg-replace="true"></span>
+                        </div>
+                        </div>
+                    </div>
+                <div class="well">
+                    
+                    <p>Click here to post the ad.</p>
+
+                    <button type="submit" class="btn btn-success">Post Ad</button>
+                   
+                </div>
+               
+                </div>
+
+            </div>
+       
+        </div>
+          </form>      

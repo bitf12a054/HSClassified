@@ -1,0 +1,176 @@
+﻿
+<!DOCTYPE html>
+
+@helper ActiveItem(string actionName, string controllerName, string areaName)
+{
+    if (ViewContext.RouteData.Values["action"].ToString() == actionName &&
+            ViewContext.RouteData.Values["controller"].ToString() == controllerName &&
+            (ViewContext.RouteData.DataTokens["area"] == null || ViewContext.RouteData.DataTokens["area"].ToString() == areaName))
+    {
+        @:active
+    }
+}
+
+
+<html lang="en">
+<head>
+    <link rel="icon" href="~/Images/logo.jpg">
+    <link href="~/Bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome Icons -->
+    <link href="~/CSS/admin1.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="~/CSS/admin2.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style -->
+    <link href="~/CSS/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect.
+    -->
+    <link href="~/CSS/skin-blue.min.css" rel="stylesheet" type="text/css" />
+
+    <title>HS Classified</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="~/CSS/offcanvas.css" rel="stylesheet">
+    <link href="~/CSS/full-slider.css" rel="stylesheet">
+
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+</head>
+
+<body style="background-image:url(/Images/back.jpg)">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="font-family:Old English Text MT; font-size:30px">HS Classified</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        @Html.ActionLink("Home", "Index", "Acount")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Profile", "Profile", "Acount")
+                    </li>
+                    <li>
+                        @Html.ActionLink("AboutUs", "AboutUs2", "Acount")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Help", "Help2", "Acount")
+                    </li>
+                    <li>
+                        @Html.ActionLink("ContactUs", "ContactUs2", "Acount")
+                    </li>
+                    <!-- User Account Menu -->
+                    <li class="dropdown user user-menu">
+                        <!-- Menu Toggle Button -->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <!-- The user image in the navbar-->
+                            <img src="~/Images/user.png" class="user-image" alt="User Image" />
+                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                            <span class="hidden-xs">@Session["UN"]</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- The user image in the menu -->
+                            <li class="user-header">
+                                <img src="~/Images/user.png" class="img-circle" alt="User Image" />
+                                <p style="color:darkviolet">
+                                    @Session["UN"] - Registered
+                                    <small>Member of HS Classified</small>
+                                </p>
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="user-body">
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Followers</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Ratings</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Friends</a>
+                                </div>
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    @Html.ActionLink("Profile", "Profile", "Acount")
+                                </div>
+                                <div class="pull-right">
+                                    @Html.ActionLink("Logout", "Index", "Home")
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="navbar-form navbar-left pull-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+    
+    @RenderBody() 
+    
+    <br /><br />
+    
+    <!-- ======================= End Portion ====================== -->
+    <div class="container">
+        <br /><br />
+
+        <!-- ======================== Footer ======================== -->
+
+        <footer class="footer">
+            <div class="well well-sm">
+                <div class="pull-left">
+                    <ul class="nav nav-pills">
+                        <li><a href="/Acount/AdPost2" class="alert alert-success"><span class="glyphicon glyphicon-alert"></span> Post Free Ad</a></li>
+                    </ul>
+                </div>
+                <div class="pull-right">
+                    <ul class="nav nav-pills">
+                        <li><a href="/Acount/Help2">Help</a></li>
+                        <li><a href="/Acount/ContactUs2">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+            </div>
+            <div class="pull-right">
+                <br />
+                <p style="color:white">Copyright &copy; 2015, HS Classified - All Rights Reserved.  <a href="#"> Privacy</a> &middot; <a href="#">Terms</a></p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ================================================== -->
+
+    <script src="~/JQuery/jquery-1.11.3.js"></script>
+    <script src="~/Bootstrap/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="~/JQuery/HomeScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="~/CSS/full-slider.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h2>Login Failed</h2>
+        <div>
+            <form  method="post" action="/Home/Login">
+                <h3>Invalid User ID or Password</h3>
+                <button class="btn btn-primary" type="submit">Try Again</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

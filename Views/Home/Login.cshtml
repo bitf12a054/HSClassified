@@ -1,0 +1,48 @@
+﻿@model Project.Models.User
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml"; 
+}
+<link href="/Fonts/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <br />
+
+    <h1 style="text-align: center; font-family:'Arabic Typesetting'; font-size:60px">Free Online Classified Ads</h1>
+
+    <div class="row content">
+            <div class="col-md-7">
+                <div class="col-md-offset-7">
+                    <hr>
+                    <h2 class="intro-text text-centre" style="text-align: center; font-family:Castellar">
+                        Login Form
+                        <strong></strong>
+                    </h2>
+                    <hr>
+                    @*@Html.BeginForm(){*@
+                    
+                    <form  class="form-signin" method="post" action="/Acount/UserLogin">
+                        <h2 class="form-signin-heading">Please Sign In</h2>
+                        @*<div class="input-group margin-bottom-sm">
+                          <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                          <input class="form-control" type="text" placeholder="Email address">
+                        </div>
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                          <input class="form-control" type="password" placeholder="Password">
+                        </div>*@
+                        <label for="inputEmail" class="sr-only">Email address</label>
+                        @Html.TextBoxFor(model => model.Email, new { @class="form-control" , placeholder="UserName"})
+                        @*<input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="e" required autofocus>*@
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        @Html.TextBoxFor(model => model.Password, new { @type="password" ,  @class="form-control" , placeholder="Password"})
+                        @*<input type="password" id="inputPassword" class="form-control" placeholder="Password" name="p" required>*@
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBox("Remember Me")Remember Me
+                                @*<input type="checkbox" value="remember-me"> Remember me*@
+                            </label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
