@@ -1,11 +1,11 @@
-﻿@model Project.Models.Ad
+﻿
 
 @{
     Layout = "~/Views/Shared/_Layout2.cshtml"; 
 }
 
-    @Html.BeginForm("posted", "Acount", FormMethod.Post, new { @class="form" }){
-    @*<form enctype="multipart/form-data"  method="post" action="/Acount/posted">*@
+    
+    <form enctype="multipart/form-data"  method="post" action="/Acount/posted">
     <br/><hr />
     <h1 style="text-align: center; font-family:'Arabic Typesetting'; font-size:60px">Free Online Classified Ads</h1>
     <div class="row content">
@@ -128,5 +128,4 @@
             </div>
        
         </div>
-          @*</form>*@  
-        @{Html.EndForm();}    
+          </form> 

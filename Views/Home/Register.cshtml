@@ -136,16 +136,16 @@
         $('#btn').on('click', function () {
             var s = $('#b1').val();
 
-            //$.getJSON("/Home/chkname", function (flag) {
-            //    alert("User");
+            $.getJSON("/Home/chkname", function (flag) {
+                alert("User");
 
                 if (s != null) {
-                    $('#p1').text('Username Available');//'User Already Exist');
+                    $('#p1').text('User Already Exist');
                 }
                 else {
                     $('#p1').text('Valid');
                 }
-            //});
+            });
         });
     });
    
